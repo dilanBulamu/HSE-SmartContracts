@@ -21,7 +21,7 @@ describe("Test", function () {
     it("Should work", async function () {
       const {gameContract, autoplayer } = await loadFixture(deploy);
       
-      expect(await autoplayer.commitMove()).not.throws();
+      await autoplayer.commitMove();
     });
   });
 });
